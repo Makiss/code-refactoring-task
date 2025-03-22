@@ -16,6 +16,10 @@ function getMaxItem(arr, getCompareItem) {
   }, -Infinity);
 }
 
+function findIndex(arr, predicate) {
+  return arr.findIndex(predicate);
+}
+
 function insertArrayItems(arr, index, ...items) {
   return arr.toSpliced(index, 0, ...items);
 }
@@ -40,6 +44,7 @@ export {
   copyShallowArray,
   getItem,
   getMaxItem,
+  findIndex,
   insertArrayItems,
   join,
   map,

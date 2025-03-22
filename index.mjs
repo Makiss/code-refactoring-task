@@ -1,6 +1,6 @@
 import { withTryCatch } from "./conditionals.mjs";
-import { formatPopulationData } from "./population.mjs";
-import { displayTable } from "./table.mjs";
+import { calculateDensityPercentage } from "./population.mjs";
+import { PopulationTable } from "./PopulationTable.mjs";
 
 const data = `city,population,area,density,country
   Shanghai,24256800,6340,3826,China
@@ -14,9 +14,24 @@ const data = `city,population,area,density,country
   New York City,8537673,784,10892,United States
   Bangkok,8280925,1569,5279,Thailand`;
 
-const run = withTryCatch(() => {
-  const formattedTable = formatPopulationData(data);
-  displayTable(formattedTable);
+const main = withTryCatch(() => {
+  const populationTable = new PopulationTable(data);
+  const densityPercentageColumnNumber = populationTable.columnsCount;
+
+  populationTable
+    .insertColumn("densityPercentage", densityPercentageColumnNumber, (row) => {
+      return calculateDensityPercentage(
+        populationTable.getDensity(row),
+        populationTable.maxDensity
+      );
+    })
+    .sort(
+      (row1, row2) =>
+        row2[densityPercentageColumnNumber] -
+        row1[densityPercentageColumnNumber]
+    )
+    .formatTable()
+    .render();
 }, console.error);
 
-run();
+main();

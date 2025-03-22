@@ -1,6 +1,10 @@
-function when(condition, callback) {
+function ifElse(condition, onTrue, onFalse) {
+  return condition ? onTrue() : onFalse();
+}
+
+function when(condition, onTrue) {
   if (condition) {
-    callback();
+    return onTrue();
   }
 }
 
@@ -14,4 +18,4 @@ function withTryCatch(tryFn, catchFn) {
   };
 }
 
-export { when, withTryCatch };
+export { ifElse, when, withTryCatch };
