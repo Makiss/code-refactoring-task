@@ -1,4 +1,4 @@
-import { round } from "./number.mjs";
+import { round } from "../../utils/number.mjs";
 
 function calculateDensityPercentage(density, maxDensity) {
   return round(calculatePercentage(density, maxDensity));

@@ -1,0 +1,19 @@
+{
+  "name": "code-refactoring-task",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makiss/code-refactoring-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Makiss/code-refactoring-task/issues"
+  },
+  "homepage": "https://github.com/Makiss/code-refactoring-task#readme",
+  "description": ""
+}

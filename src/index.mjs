@@ -1,6 +1,6 @@
-import { withTryCatch } from "./conditionals.mjs";
-import { calculateDensityPercentage } from "./population.mjs";
-import { PopulationTable } from "./PopulationTable.mjs";
+import { withTryCatch } from "./utils/conditionals.mjs";
+import { calculateDensityPercentage } from "./features/population/utils.mjs";
+import { PopulationTable } from "./features/population/PopulationTable.mjs";
 
 const data = `city,population,area,density,country
   Shanghai,24256800,6340,3826,China

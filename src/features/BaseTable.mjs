@@ -4,9 +4,9 @@ import {
   insertArrayItems,
   map,
   sort as sortArr,
-} from "./array.mjs";
-import { when } from "./conditionals.mjs";
-import { split } from "./string.mjs";
+} from "../utils/array.mjs";
+import { when } from "../utils/conditionals.mjs";
+import { split } from "../utils/string.mjs";
 
 export class BaseTable {
   #rows;

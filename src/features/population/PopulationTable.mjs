@@ -1,7 +1,7 @@
-import { getItem, getMaxItem, map, reduce } from "./array.mjs";
-import { BaseTable } from "./BaseTable.mjs";
-import { ifElse, when } from "./conditionals.mjs";
-import { padEnd, padStart } from "./string.mjs";
+import { getItem, getMaxItem, map, reduce } from "../../utils/array.mjs";
+import { BaseTable } from "../BaseTable.mjs";
+import { ifElse, when } from "../../utils/conditionals.mjs";
+import { padEnd, padStart } from "../../utils/string.mjs";
 
 export class PopulationTable extends BaseTable {
   constructor(data) {
